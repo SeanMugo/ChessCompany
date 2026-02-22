@@ -1,27 +1,67 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PawnToPlay</title>
+    <style>
+      body {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        margin 0;
+        
+      }
+
+      .navbar {
+        display: flex;
+        position: fixed;
+        justify-content:space-between;
+        align-items: center;
+        padding: 1rem 5%;
+        background: white;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      .logo {
+        font-weight: bold;
+        font-size: 1.5rem;
+        color: #fad70f;
+      }
+
+      .nav-links {
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+        margin: 0;                        
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: #333;
+      }
+
+      .nav-buttons {
+        display: flex;
+        gap: 2rem;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+      }
+    </style>
+  </head>
+  <body>
     <!-- Navigation bar -->
     <nav class="navbar">
-    <div class="logo">♟️PawnToPlay</div>
-    
-    <ul class="nav-links">
+      <div class="logo">♟️PawnToPlay</div>
+
+      <ul class="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
-    </ul>
-    
-    <div class="nav-buttons">
+      </ul>
+
+      <div class="nav-buttons">
         <a href="#" class="login">Login</a>
         <a href="#" class="signup">Sign Up</a>
-    </div>
-</nav>
-    
-</body>
+      </div>
+    </nav>
+  </body>
 </html>
