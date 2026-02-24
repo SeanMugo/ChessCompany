@@ -19,11 +19,17 @@
         padding: 1rem 5%;
         background: white;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        top: 0;                     
+        left: 0;                    
+        right: 0;                   
+        width: 100%;        
+        z-index: 1000;         
+        box-sizing: border-box;
       }
       .logo {
         font-weight: bold;
         font-size: 1.5rem;
-        color: #fad70f;
+        color: #0fc3fa;
       }
 
       .nav-links {
@@ -44,6 +50,60 @@
         text-decoration: none;
         padding: 0.5rem 1rem;
       }
+
+      .hero {
+        padding: 4rem 5%;
+        text-align: center;
+        background: linear-gradient(135deg, #669bbc);
+        color: white;
+           
+      }
+
+      .hero-buttons :hover {
+         background: white;
+            color: #2c3e50;
+            transform: translateY(-3px);
+      }
+
+      .services {
+            padding: 5rem 5%;
+      }      
+      
+      .service-title {
+        text-align: center;
+      }
+
+      .service-grid {
+         display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+      }
+
+      .service-card {
+        background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.788);
+            transition: transform 0.3s;
+      }
+
+      .about h2 {
+        text-align: center;
+      }
+
+      .contact-title {
+        text-align: center;
+      }
+
+      .contact-form {
+        padding: 4rem 5%;
+        text-align: center;
+        background: linear-gradient(135deg, #669bbc);
+        color: white;
+      }
     </style>
   </head>
   <body>
@@ -52,7 +112,7 @@
       <div class="logo">♟️PawnToPlay</div>
 
       <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
+        <li><a href="#hero">Home</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -63,5 +123,100 @@
         <a href="#" class="signup">Sign Up</a>
       </div>
     </nav>
+
+    <div class="hero" id="hero">
+        <h1>Unlock Your Hidden Chess Potential</h1>
+        <p>Learn from te best coaches available, compete in tournaments, and sharpen your analytical skills with puzzles.</p>
+        <div class="hero-buttons">
+                <button class="btn btn-primary">Start Free Trial</button>
+                <button class="btn btn-outline">Watch Demo</button>
+            </div>
+      </div>
+
+      <div class="services" id="services">
+        <div class="service-title">
+          <h2>Our Services</h2>
+          <p>Everything you need to level up</p>
+          </div>
+          <div class="service-grid">
+            <div class="service-card">
+              <h3>Interactive Lessons</h3>
+              <p>We offer step-byy-step courses taught by the best of the best to perfect your principles.</p>
+            </div>
+
+            <div class="service-card">
+              <h3>Puzzles</h3>
+              <p>Sharpen your tactis with daily puzzles tailored to your skill level.</p>
+            </div>
+
+            <div class="service-card">
+              <h3>Game Analysis</h3>
+              <p>Use the most powerful engine to analyse your game, allowing you to learn frmo your mistakes.</p>
+            </div>
+
+            <div class="service-card">
+              <h3>Live Tournaments</h3>
+              <p>Test your skills against other players around the globe.</p>
+            </div>
+
+          </div>
+        </div>
+        </div>
+
+        <div class="about" id="about">
+          <h2>Our Organization</h2>
+          <p>This club was found in the year 2024 by Grandmaster Ethan Kiplimo with one goal in mind: make world-class chess education accessible to all.</p>
+          <p>Today, we are proud to announce that we have over 100,000 students that have used our services to skyrocket their rating.</p>
+        </div>
+
+        <div class="contact" id="contact">
+          <div class="contact-title">
+    <h2>Contact Us</h2>
+       <p>Get in touch with our coaches</p>
+       </div>
+       <div class="contact-form">
+    <form action="/submit-registration" method="POST" enctype="multipart/form-data" >
+       <div class="form">
+         <label for="name">Full Name</label> 
+       <input type="text" name="name" id="name" placeholder="John Doe"> <br>
+       </div>
+      
+       <div class="form">
+        <label for="email">Email</label>
+       <input type="email" name="email" id="email" placeholder="JohnDoe@gmail.com">
+       </div>
+       
+       <div class="form">
+        <label for="rating">Select your rating</label>
+       <select name="rating" id="rating" required>
+        <option value="Beginner">0-1000</option>
+        <option value="Intermediate">1000-1500</option>
+        <option value="Advanced">1500-2000</option>
+        <option value="Master">2000+</option>
+       </select>
+       </div>
+
+       <div class="form">
+         <label for="phone">Phone</label>
+       <input type="tel" name="phone" id="phone" accept="[0-9]+" placeholder="0712345678">
+       </div>
+      
+       <div class="form">
+        <label for="goals">Your chess goals</label> 
+        <br>
+       <textarea name="goals" id="goals" rows="10"cols="60" placeholder="Let us know your chess goals" required></textarea>
+       </div>
+       
+       <div>
+        <button type="submit">Send Message</button>
+        <button type="reset">Clear Form</button>
+       </div>
+       
+       <div class="footer">
+        <footer>©️PawnToPlay All copyrights reserved</footer>
+       </div>
+
+      
   </body>
+  
 </html>
